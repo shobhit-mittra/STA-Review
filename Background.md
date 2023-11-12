@@ -14,3 +14,13 @@ Clock tree synthesis (CTS) is performed on the post-placement layout to distribu
 
 In the physical design stage, metal traces or interconnects are used for routing, resulting in finite delay during propagation. The Standard Parasitic Extraction File (SPEF) is obtained during the extraction stage, which includes information about the approximate length of interconnects. For nanometer designs, RC-parasitics dominate power dissipation and define interconnect delays. The scaling of transistor technologies leads to the prevalence of coupling among interconnects, contributing to cross-talk and noise. Therefore, static timing analysis (STA) should include the effects of noise and cross-talk at later stages of the physical design.
 
+![](/images/theory/sta_vlsi.png)
+
+- Fig.1 Demonstrates the role of STA in a design flow
+
+Various techniques, such as wire-load models (WLMs), are used to estimate the length of interconnects. The extraction tool can be used for final verification or iterative optimization. It is crucial to consider the effect of cross-talk and noise due to coupling, as it is impractical to consider it during the global routing phase due to the absence of finalized routes.
+
+The execution of static timing analysis depends on several key factors within a gate-level netlist, including the chosen interconnect modelling approach, the modeling of clocks, and the inclusion or exclusion of coupling effects between signals. These considerations shape the static timing analysis process, tailoring it to specific design requirements and objectives.
+
+
+
