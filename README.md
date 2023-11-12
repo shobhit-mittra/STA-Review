@@ -7,10 +7,11 @@ This study documents my undertsandings and learnings of the concepts of Static T
 The systematic review is divided into the following heirarchical index in this repositry :
 
 1. [Introduction](Introduction.md) : Brief introduction to the need for STA
-2. [Background : STA and its role in design flow](Background.md) : Description about the role of STA in the VLSI-design flow 
-3. [An Introduction to STA Essentials](STA_Essentials.md) : Concise concepts of essential to STA 
-4. [Understanding Setup and Hold Time in Digital Design](Setup_Hold_Time.md) : Grasping the concept of setup and hold time in STA
-5. [STA using PrimeTime](STA_PT.md) : < Currently in the Process of Understanding the PrimeTime tool >
+2. [Background : STA and its role in design flow](Background.md) : Description about the role of STA in the VLSI-design flow
+3. [STA Analogy](STA_Analogy.md) : An interesting analogy of STA
+4. [An Introduction to STA Essentials](STA_Essentials.md) : Concise concepts of essential to STA 
+5. [Understanding Setup and Hold Time in Digital Design](Setup_Hold_Time.md) : Grasping the concept of setup and hold time in STA
+6. [STA using PrimeTime](STA_PT.md) : < Currently in the Process of Understanding the PrimeTime tool >
 
 ## Resources :
 
