@@ -69,7 +69,9 @@ $T(hold Slack)= (tc2q +tcomb)-( Δskew+  thold)     (8)$
 
 For no hold violations, the hold slack (T_hold-slack) should be positive. Hence the arrival data should be as late as possible. Hold analysis is also referred to as early analysis. It is crucial to note that all the preceding equations apply to an oversimplified situation, thus they may vary depending on the complexity and design of the circuit, but the basic notion is the same. As a result, the equations themselves are not particularly significant; rather, the process used to generate the equations is what matters most. 
 
-Thus far, the analysis of the study revolved around the basic ideas of static timing analysis. The upcoming segment of the study delves deeper into static timing analysis and demonstrates that a simple concept such as STA could be extended and largely diversified. The upcoming section portrays advanced methodologies related to STA and their influence in timing verification and closure. 
+## Setup-Hold Time Analogy :
+
+A common question that may arise while learning about setup-hold times is *Why do we require both setup and hold, why not just one of them?*. This is a fundamental question that can be answered in many ways. According to my understanding, any electronic element whether be it a flip-flop or a simple AND gate, requires certain time frame to figure out that an event has occured (event in this context means a data-transition), much like us humans or any sort of life-form. This time-frame is reffered as *reaction time*, it determines how long does it take for an entity to detect a change has occured ; in simple words it is the difference between the time taken by the entity to detect the change and the time instance of occurance of an event. So, this *reaction time* is analogous to the *setup time*. Hence, to ensure the data is captured by the component it should *not* change within the *reaction time* (setup time) frame , else it won't be captured properly causing metastability and setup violation.
 
 
 
