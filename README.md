@@ -4,7 +4,7 @@
 This study documents my undertsandings and learnings of the concepts of Static Timing Analysis in VLSI Design. In this repositry I try to encapsulate my discoveries in the vivid landscape of STA. While undergoing this study my curiosity towards STA turned into affinity and I intend to grow my knowledge bank even further. Additionally, I intend to extend the systematic analysis into a thorough analysis by using the concepts on an industry-standard tool; I have access to `Prime Time` tool via my University so I'd update this repo. as I do the timing analysis on the tool.
 
 > [!IMPORTANT]
-> All the illustrations used in the /images/theory directory are made using `Draw.io` environment
+> All the illustrations used in the /images/theory directory are designed by me using `Draw.io` environment
 
 
 ## Index :
