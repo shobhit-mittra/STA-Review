@@ -37,19 +37,19 @@ Now, this arrival time (<i>t_arrival</i>) must be setup time ($tsu$) before the 
 
 Hence, arrival time and required time are given by the summation of the events mentioned above , i.e <i>t_arrival</i> is equal to $Δ1 +  tc2q + tcomb$  and <i>t_required</i> is  equal to $tClk + Δ2 + (-tsu)$. Thus the condition for setup analysis can be given by the equations (2): 
 
-$Δ1 +  tc2q + tcomb  ≤  tClk + Δ2 -tsu     (2)$
+$Δ1 +  tc2q + tcomb  ≤  tClk + Δ2 -tsu(2)$
 
 The equation (2) can be rearranged as equation (3) where clock skew is considered positive (capture clock as reference) and $Δskew$ is given as $Δ2 - Δ1$.
 
-$tc2q + tcomb +tsu ≤   tClk + Δskew    (3)$
+$tc2q + tcomb +tsu ≤   tClk + Δskew(3)$
 
 Now, the maximum operating frequency of the design with the timing constraints provided by the designer can be computed by equation (4), Hence setup analysis is crucial to evaluate the permissible frequency of the system under given constraints. The parameters in the equation can be optimised further to improve the frequency performance of the design.
 
-$fClk(max)= 1/(tc2q + tcomb +tsu -Δskew)  (4)$
+$fClk(max)= 1/(tc2q + tcomb +tsu -Δskew)(4)$
 
 The setup slack is computed as the difference of required and arrival time, as illustrated in equation (5). Setup slack or slack in general acts as an indication of integrity for a timing path. Positive setup slack implies that data arrives before the required time hence the setup check is cleared, whereas a negative setup slack implies that the data arrives after required time which causes a setup timing violation.
 
-$T(setup Slack)= (tClk + Δskew- tsu) -(tc2q +tcomb)     (5)$
+$T(setup Slack)= (tClk + Δskew- tsu) -(tc2q +tcomb)(5)$
 
 Setup analysis is also referred to as Late analysis.  
 
@@ -57,23 +57,23 @@ Setup analysis is also referred to as Late analysis.
 
 Hold analysis can be conducted in a manner like setup analysis with slight adjustments. The hold requirement states that the data launched at the current clock edge must not travel to the capture flop before the hold time has passed after the clock edge. This essentially means that the hold analysis is conducted after the active clock edge has passed, which means hold analysis is independent of clock period and hence hold equations do not contain  $tClk$ term. The hold check is passed when the arrival time is more than the required time  since the data must remain stable after the active clock edge for the hold check. The active edge for the analysis is the positive edge of the clock. The arrival time and required time equations remain the same as setup analysis except the exclusion of clock period. The hold analysis equation can be formulated as under : 
 
-$Δ1 +  tc2q + tcomb  >  Δ2 + thold     (6)$
+$Δ1 +  tc2q + tcomb  >  Δ2 + thold(6)$
 
 This equation (6) can be further simplified by assuming positive skew, i.e  $Δ2$ is greater than Δ1 and skew is computed with respect to capture clock path. The modified equation is given as follows : 
 
-$tc2q + tcomb >  Δskew +  thold       (7)$
+$tc2q + tcomb >  Δskew +  thold(7)$
 
 The hold slack is computed as the difference of arrival and required time, as illustrated in equation (8).  
 
-$T(hold Slack)= (tc2q +tcomb)-( Δskew+  thold)     (8)$
+$T(hold Slack)= (tc2q +tcomb)-( Δskew+  thold)(8)$
 
 For no hold violations, the hold slack (T_hold-slack) should be positive. Hence the arrival data should be as late as possible. Hold analysis is also referred to as early analysis. It is crucial to note that all the preceding equations apply to an oversimplified situation, thus they may vary depending on the complexity and design of the circuit, but the basic notion is the same. As a result, the equations themselves are not particularly significant; rather, the process used to generate the equations is what matters most. 
 
 ## Setup-Hold Time Analogy :
 
-A common question that may arise while learning about setup-hold times is *Why do we require both setup and hold, why not just one of them?*. This is a fundamental question that can be answered in many ways. According to my understanding, any system whether be it a flip-flop or a simple AND gate, requires certain time frame to figure out that an event has occured (event in this context means a data-transition), much like us humans or any sort of life-form. This time-frame is refeered as *reaction time*, it determines how long does it take for an entity to detect a change has occured ; in simple words it is the difference between the time taken by the entity to detect the change and the time instance of occurance of an event. So, this *reaction time* is analogous to the *setup time*. Hence, to ensure the data is captured by the system it should *not* change within the *reaction time* (setup time) frame, else it won't be captured properly causing metastability and setup violation. 
+A common question that may arise while learning about setup-hold times is <b>*Why do we require both setup and hold, why not just one of them?*</b> This is a fundamental question that can be answered in many ways. According to my understanding, any system whether be it a flip-flop or a simple AND gate, requires certain time frame to figure out that an event has occured (event in this context means a data-transition), much like us humans or any sort of life-form. This time-frame is refeered as reaction time, it determines how long does it take for an entity to detect a change has occured ; in simple words it is the difference between the time taken by the entity to detect the change and the time instance of occurance of an event. So, this *reaction time* is analogous to the setup time. Hence, to ensure the data is captured by the system it should *not* change within the reaction time (setup time) frame, else it won't be captured properly causing metastability and setup violation. 
 
-This analogy can be extended to hold time as well. As discussed above that *reaction time* is the time required for a system to recognize to a stimulus, now the time required by the system to act onto that stimulus after recognizing it is called the *response time*. A system (considiring digital systems), in addition to a *reaction time* (*setup time*), also requires this *response time* to determine whether the transition that has occured is a 0 or a 1. This *response time* is analogous to *hold time*. Hence, to ensure that the data is properly "understood" by the system, the data must not change within this 'deciding phase' or the *response time* (hold time) frame.
+This analogy can be extended to hold time as well. As discussed above that reaction time is the time required for a system to recognize to a stimulus, now the time required by the system to act onto that stimulus after recognizing it is called the response time. A system (considiring digital systems), in addition to a reaction time(setup time), also requires this response time to determine whether the transition that has occured is a 0 or a 1. This response time is analogous to hold time. Hence, to ensure that the data is properly "understood" by the system, the data must not change within this 'deciding phase' or the response time (hold time) frame.
 
 For a system to be reliable and efficient, it requires to have both these distinct time frames (setup and hold) as taking away one of them can cause issues and 
 
