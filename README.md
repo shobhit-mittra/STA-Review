@@ -1,7 +1,7 @@
 # Importance of Static Timing Analysis in Digital Circuit Design : A Systematic Review
 
 ## Overview :
-This study documents my undertsandings and learnings of the concepts of Static Timing Analysis in VLSI Design. In this repositry I try to encapsulate my discoveries in the vivid landscape of STA. While undergoing this study my curiosity towards STA turned into affinity and I intend to grow my knowledge bank even further. Additionally, I intend to extend the systematic analysis into a thorough analysis by using the concepts on an industry-standard tool; I have access to `Prime Time` tool via my University so I'd update this repo. as I do the timing analysis on the tool.
+This study documents my undertsandings and learnings of the concepts of Static Timing Analysis in VLSI Design. In this repositry I try to encapsulate my discoveries in the vivid landscape of STA. While undergoing this study my curiosity towards STA turned into affinity and I intend to grow my knowledge bank even further. Additionally, I intend to extend the systematic analysis into a thorough analysis by using the concepts on an industry-standard tool; I have access to `Prime Time` tool via my University so I'd update this repo. as I do the timing analysis on the tool. In addition to  `Prime Time` tool, I'll also try to use open-source EDA tool for Static Timing Analysis, namely `Open Timer`. The installation link for OpenTimer can be found in the <b>Resources</b> section below.
 
 > [!IMPORTANT]
 > All the illustrations used in the /images/theory directory are designed by me using `Draw.io` environment
@@ -16,8 +16,11 @@ The systematic review is divided into the following heirarchical index in this r
 4. [An Introduction to STA Essentials](STA_Essentials.md) : Concise concepts of essential to STA 
 5. [Understanding Setup and Hold Time in Digital Design](Setup_Hold_Time.md) : Grasping the concept of setup and hold time in STA
 6. [STA using PrimeTime](STA_PT.md) : < Currently in the Process of Understanding the PrimeTime tool >
+7. [STA using OpenTimer](/OpenTimer) 
+
 
 ## Resources :
 
 - "Static Timing Analysis for Nanometer Designs : A Practical Approach" by J. Bhaskar, Rakesh Chadha
 - Great STA playlist : "https://youtube.com/playlist?list=PLpCkjM331Aa8JNoZ1s1o1txve2wlf9pCP&si=YDHsOTRuT9JyJDhC"
+- OpenTimer installation instructions : "https://github.com/OpenTimer/OpenTimer"
