@@ -1,1 +1,20 @@
-All my OpenTimer related work here
+# Getting Started With OpenTimer :
+
+The following are the steps that replicate my approach towards intializing and running the timing analysis on `OpenTimer`.
+
+## Setting up the work environment :
+
+After the installation of OpenTimer, locate the `ot-shell` in the `bin` directory in the installed OpenTimer directory as shown below. 
+
+![](/images/theory/OpenTimer_dir.png)
+
+After locating the `ot-shell` simply copy it to your `work` directory where the runs would be done. It is preferable to create a proper directory that contains all necessary directories and files for the static analysis runs. My personal `work` directory looks something like the image under :
+
+![](/images/theory/my_work_dir.png)
+
+Now that the environment is set we can proceed onto envoking the tool.
+
+## Envoking OpenTimer :
+
+To envoke the tool simply type `./ot-shell`. In case the run is done on a separate directory then it is important to copy the full path to the ot-shell. Hence, it is recommended to copy the `ot-shell` executable file to a directory one needs to work in. After running the 
+
