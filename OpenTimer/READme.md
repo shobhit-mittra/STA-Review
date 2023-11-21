@@ -10,7 +10,7 @@ After the installation of OpenTimer, locate the `ot-shell` in the `bin` director
 
 After locating the `ot-shell` simply copy it to your `work` directory where the runs would be done. It is preferable to create a proper directory that contains all necessary directories and files for the static analysis runs. My personal `work` directory looks something like the image under :
 
-![](/images/theory/my_work_dir.png)
+![](/images/theory/my_work_dir)
 
 Now that the environment is set we can proceed onto invoking the tool.
 
