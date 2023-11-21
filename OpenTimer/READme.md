@@ -27,8 +27,13 @@ In case the run is done on a separate directory then it is important to copy the
 
 Now that the tool is invoked, we are ready to perform STA.
 
-> [!IMPORTANT]
+> [!NOTE]
 > A better approach to invoke the tool is to create an environment variable and use that variable to call the path to the ot-shell, that environment variable can have a simple name such as opentimer or run_ot.
+
+<br/>
+
+## Initial Flow OpenTimer tool :
+
 
 
 
