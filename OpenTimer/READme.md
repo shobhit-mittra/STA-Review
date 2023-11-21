@@ -12,9 +12,23 @@ After locating the `ot-shell` simply copy it to your `work` directory where the 
 
 ![](/images/theory/my_work_dir.png)
 
-Now that the environment is set we can proceed onto envoking the tool.
+Now that the environment is set we can proceed onto invoking the tool.
 
-## Envoking OpenTimer :
+## Invoking OpenTimer :
 
-To envoke the tool simply type `./ot-shell`. In case the run is done on a separate directory then it is important to copy the full path to the ot-shell. Hence, it is recommended to copy the `ot-shell` executable file to a directory one needs to work in. After running the 
+To envoke the tool simply type the command below. 
+```
+./ot-shell 
+```
+
+In case the run is done on a separate directory then it is important to copy the full path to the ot-shell. Hence, it is recommended to copy the `ot-shell` executable file to a directory one needs to work in. After running the command, the user is prompted to the ot-shell that looks like the image under :
+
+![](/images/theory/ot_shell_prompt.png)
+
+Now that the tool is invoked, we are ready to perform STA.
+
+> [!IMPORTANT]
+> A better approach to invoke the tool is to create an environment variable and use that variable to call the path to the ot-shell, that environment variable can have a simple name such as opentimer or run_ot.
+
+
 
