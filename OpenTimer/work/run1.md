@@ -9,6 +9,7 @@
 ```
 report_timing
 ```
+The timing report generated is as under :
 
 ![](/images/sim/report1.png)
 
