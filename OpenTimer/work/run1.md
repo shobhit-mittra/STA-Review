@@ -1,5 +1,14 @@
 # Files used :
 
 - Verilog : [simple.v](/OpenTimer/verilog/simple.v)
-- Lib : [osu_](/OpenTimer/libs/)
+- Lib : [osu018_stdcells.lib](/OpenTimer/libs/osu018_stdcells.lib)
 - SDC : [simple.sdc](/OpenTimer/sdc/simple.sdc)
+
+# Reports :
+
+```
+report_timing
+```
+
+![](/images/sim/report1.png)
+
