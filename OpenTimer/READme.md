@@ -37,7 +37,7 @@ Now that the tool is invoked, we are ready to perform STA.
 To perform a basic timing analysis, the three underlined set of files are required :
 
 - Verilog File : Describes the design of the circuit in HDL. Extension : .v
-- SDC : Synopsys Design Constraint file contains the constraints that the design is desired to meet. An SDC is written in tcl language.
-- Lib : 
+- SDC : Synopsys Design Constraint file contains the constraints that the design is desired to meet. An SDC is written in tcl language. Extension : .sdc
+- Lib : The .lib contains the cell-definition and parameters (nominal conditions, 
 
 
