@@ -38,6 +38,29 @@ To perform a basic timing analysis, the three underlined set of files are requir
 
 - Verilog File : Describes the design of the circuit in HDL. Extension : .v
 - SDC : Synopsys Design Constraint file contains the constraints that the design is desired to meet. An SDC is written in tcl language. Extension : .sdc
-- Lib : The .lib contains the cell-definition and parameters (nominal conditions, 
+- Lib : The .lib contains the cell-definition and parameters (nominal conditions, luts , cell functionality, timing information).
+
+> [!NOTE]
+> The verilog file must contain the cell instances present in the .lib file and the pins of the modules should be properly mapped to the pins of the cells in the library file. Failure to do so may cause an error while reading the verilog file in the tool.
+
+To run the opentimer use the following commands in the ot-shell in the following order:
+
+```
+read_celllib <path_to_lib>
+```
+This command reads the library given in the path.
+
+```
+read_verilog <path_to_verilog> 
+```
+This command reads the verilog given in the path.
+
+```
+read_sdc <path_to_sdc>
+```
+This command reads the sdc given in the path.
+
+
+
 
 
