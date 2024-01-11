@@ -29,13 +29,13 @@ The arrival time is computed by simply following the sequence of events mentione
 2. The launch flop takes tc2q to produces a valid output
 3. Finally, the output of launch flop takes tcomb to reach the capture flop
 
-Now, this arrival time (<i>t_arrival</i>) must be setup time ($tsu$) before the second rising edge actually reaches the clock. This means required time can be computed using the events below, similar to arrival time :
+Now, this arrival time (*t_arrival*) must be setup time ($tsu$) before the second rising edge actually reaches the clock. This means required time can be computed using the events below, similar to arrival time :
 
-1.	The second rising edge arrives after time <i>t_Clk<i> from time zero.
+1.	The second rising edge arrives after time *t_Clk* from time zero.
 2.	The capture signal reaches the capture flop after $Δ2$
 3.	The data should arrive at a time before the event 2 occurs, i.e $tsu$
 
-Hence, arrival time and required time are given by the summation of the events mentioned above , i.e <i>t_arrival</i> is equal to $Δ1 +  tc2q + tcomb$  and <i>t_required</i> is  equal to $tClk + Δ2 + (-tsu)$. Thus the condition for setup analysis can be given by the equations (2): 
+Hence, arrival time and required time are given by the summation of the events mentioned above , i.e *t_arrival* is equal to $Δ1 +  tc2q + tcomb$  and *t_required* is  equal to $tClk + Δ2 + (-tsu)$. Thus the condition for setup analysis can be given by the equations (2): 
 
 $Δ1 +  tc2q + tcomb  ≤  tClk + Δ2 -tsu(2)$
 
@@ -71,9 +71,9 @@ For no hold violations, the hold slack (T_hold-slack) should be positive. Hence 
 
 ## Setup-Hold Time Analogy :
 
-A common question that may arise while learning about setup-hold times is <b>Why do we require both setup and hold, why not just one of them?</b> This is a fundamental question that can be answered in many ways. According to my understanding, any system whether be it a flip-flop or a simple AND gate, requires certain time frame to figure out that an event has occured (event in this context means a data-transition), much like us humans or any sort of life-form. This time-frame is refeered as <b>reaction time</b>, it determines how long does it take for an entity to detect a change has occured ; in simple words it is the difference between the time taken by the entity to detect the change and the time instance of occurance of an event. So, this <b>reaction time</b> is analogous to the <b>setup time</b>. Hence, to ensure the data is captured by the system it should <b>NOT</b> change within the <b>reaction time</b> (setup time) frame, else it won't be captured properly causing metastability and setup violation. 
+A common question that may arise while learning about setup-hold times is **Why do we require both setup and hold, why not just one of them?** This is a fundamental question that can be answered in many ways. According to my understanding, any system whether be it a flip-flop or a simple AND gate, requires certain time frame to figure out that an event has occured (event in this context means a data-transition), much like us humans or any sort of life-form. This time-frame is referred as **reaction time**, it determines how long does it take for an entity to detect a change has occured ; in simple words it is the difference between the time taken by the entity to detect the change and the time instance of occurance of an event. So, this **reaction time** is analogous to the **setup time**. Hence, to ensure the data is captured by the system it should **NOT** change within the **reaction time** (setup time) frame, else it won't be captured properly causing metastability and setup violation. 
 
-This analogy can be extended to hold time as well. As discussed above that <b>reaction time</b> is the time required for a system to recognize to a stimulus, now the time required by the system to act onto that stimulus after recognizing it is called the <b>response time</b>. A system (considiring digital systems), in addition to a <b>reaction time</b>(setup time), also requires this response time to determine whether the transition that has occured is a 0 or a 1. This response time is analogous to <b>hold time</b>. Hence, to ensure that the data is properly "understood" by the system, the data must <b>NOT</b> change within this 'deciding phase' or the <b>response time</b> (hold time) frame.
+This analogy can be extended to hold time as well. As discussed above that **reaction time** is the time required for a system to recognize to a stimulus, now the time required by the system to act onto that stimulus after recognizing it is called the **response time**. A system (considiring digital systems), in addition to a **reaction time**(setup time), also requires this response time to determine whether the transition that has occured is a 0 or a 1. This response time is analogous to **hold time**. Hence, to ensure that the data is properly "understood" by the system, the data must **NOT** change within this 'deciding phase' or the **response time** (hold time) frame.
 
 For a system to be reliable and efficient, it requires to have both these distinct time frames (setup and hold) as taking away one of them can cause issues in capturing and processing the actual data. In an ideal scenario, these reaction and response time frames can be considered to be negligible but from a practical stand-point any and every system will have a finite set of delays and time-frames. Hence, both setup and hold time are required and form the very foundation of Static Timing Analysis.
 
